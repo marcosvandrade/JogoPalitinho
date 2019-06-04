@@ -10,7 +10,7 @@ public class Cliente {
     public static void main(String[] args) 
                 throws UnknownHostException, IOException {
         // dispara cliente
-        new Cliente("Professor","10.18.0.59", 12345).executa();
+        new Cliente("Professor","10.18.3.44", 12345).executa();
     }
 
     
@@ -32,7 +32,7 @@ public class Cliente {
         Recebedor r = new Recebedor(cliente.getInputStream());
         new Thread(r).start();
 
-        // lê msgs do teclado e manda pro servidor
+        // lï¿½ msgs do teclado e manda pro servidor
         Scanner teclado = new Scanner(System.in);
         PrintStream saida = new PrintStream(cliente.getOutputStream());
         while (teclado.hasNextLine()) {
